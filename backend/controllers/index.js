@@ -26,11 +26,10 @@
 async function getEditData( req,res) {
     try {
         let Id=req.params.id;
-        console.log(Id)
+        // console.log(Id)
 
         let data = await topicModel.findById(Id);
-        console.log('akk')
-        res.status(200).json({message:"dta come succesfully",
+         res.status(200).json({message:"dta come succesfully",
              success:true,
              data:data,
             error:false
@@ -109,7 +108,7 @@ async function PutApi(req, res) {
 }
 
 
-    async function PostApi( req,res) {
+async function PostApi( req,res) {
     try {
         let payload = req.body;   
         // console.log(payload);   
